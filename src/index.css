@@ -1,0 +1,51 @@
+@import "tailwindcss";
+/* استدعاء خطوط التوقيع الحقيقية عشان إمضاء Michael Magdy يظهر فخم في أي جهاز */
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Great+Vibes&display=swap');
+
+/* 🌟 1. الوضع الليلي (أسود لامع فخم Glossy Obsidian مع لمسات لبني مضيئة) */
+html.dark {
+  --color-gray-950: #030508 !important; /* أسود لامع عميق */
+  --color-gray-900: #080d14 !important; /* أسود زجاجي للكروت */
+  --color-gray-800: #152238 !important; /* حدود لبني داكنة */
+  --color-gray-700: #1e3a5f !important;
+  --color-gray-400: #94a3b8 !important;
+  --color-gray-300: #cbd5e1 !important;
+  --color-white: #ffffff !important;
+
+  --color-rose-400: #38bdf8 !important;
+  --color-rose-500: #0ea5e9 !important;
+  --color-rose-600: #0284c7 !important;
+}
+
+/* 🌟 2. الوضع النهاري (أزرق سماوي ولبني فاتح مشرق) */
+html.theme-light {
+  --color-gray-950: #e0f2fe !important; /* خلفية سماوي فاتح */
+  --color-gray-900: #f0f9ff !important; /* كروت أبيض ثلجي */
+  --color-gray-800: #7dd3fc !important; /* حدود لبني واضحة */
+  --color-gray-700: #38bdf8 !important;
+  --color-gray-500: #0369a1 !important;
+  --color-gray-400: #075985 !important;
+  --color-gray-300: #0c4a6e !important;
+  --color-white: #082f49 !important;    /* النصوص كحلي غامق */
+}
+
+body {
+  background-color: var(--color-gray-950) !important;
+  color: var(--color-white) !important;
+  overflow-x: hidden;
+}
+
+/* لمعة زجاجية خاصة للكروت في الوضع الأسود اللامع */
+html.dark .glossy-card {
+  background: linear-gradient(145deg, rgba(14, 23, 38, 0.85) 0%, rgba(3, 5, 8, 0.95) 100%) !important;
+  box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.9), inset 0 1px 1px 0 rgba(56, 189, 248, 0.25) !important;
+}
+
+html.theme-light .glossy-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f0f9ff 100%) !important;
+  box-shadow: 0 10px 30px -10px rgba(14, 165, 233, 0.18), inset 0 1px 1px 0 #ffffff !important;
+}
+
+body, div, nav, header, footer, section, h1, h2, h3, p, span, a, button {
+  transition: background-color 0.35s ease, color 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+}
